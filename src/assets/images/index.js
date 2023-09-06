@@ -1,0 +1,11 @@
+export const audit = require("./audit.png");
+export const book = require("./bookkeeping.png");
+export const tax = require("./taxes.png");
+export const finance_1 = require("./finance-1.jpg");
+export const finance_2 = require("./finance-2.jpg");
+export const about_1 = require("./about-1.jpg");
+export const about_2 = require("./about-2.jpg");
+export const about_3 = require("./about-3.jpg");
+export const coleman = require("./coleman.jpg");
+export const ravi = require("./ravi.jpg");
+export const mendez = require("./mendez.jpg");

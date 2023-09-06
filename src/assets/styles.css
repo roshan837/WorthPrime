@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "@fontsource/roboto/300.css";
+@import "@fontsource/roboto/400.css";
+@import "@fontsource/roboto/500.css";
+@import "@fontsource/roboto/700.css";
+
+:root {
+  --bg-dark: #1c603a;
+  --bg: #56a96a;
+  --bg-light: #b1f0b4;
+  --bg-lighter: #56a96a22;
+  --text-light: #fcfcfc;
+  --text-hover: #222222aa;
+  --border: #1c603a55;
+  --icon: #073529;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden auto;
+  background: var(--bg-lighter);
+}
+
+.grid-layout {
+  @apply grid grid-cols-1 place-content-center place-items-center gap-4;
+}
+
+.icon-style {
+  height: 100%;
+  width: 100%;
+  background-color: var(--icon);
+  -webkit-mask: url("assets/new-logo.png") no-repeat right/100% 150%;
+}
+.icon {
+  @apply mx-[8px];
+}
+
+.gradient-light {
+  background: linear-gradient(to bottom, var(--bg), var(--bg-lighter));
+}
+
+.gradient-dark {
+  background: linear-gradient(to right, var(--bg-dark), var(--bg-light));
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+}
