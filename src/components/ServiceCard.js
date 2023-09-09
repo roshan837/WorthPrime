@@ -6,8 +6,8 @@ export default function ServiceCard({ service }) {
     <div className="grid-layout h-full w-full bg-[--bg-lighter] p-4 border border-[--border] rounded-[16px] shadow-[--bg] shadow-md">
       <img
         className="w-[80px] rounded-[8px]"
-        src={service.img}
-        alt={service.img}
+        src={service?.img}
+        alt={service?.img}
       />
       <Typography variant="h6">{service.title}</Typography>
       <Typography variant="subtitle2">{service.subTitle}</Typography>

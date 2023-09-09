@@ -12,7 +12,7 @@ const ImageAutoSlide = ({ images }) => {
   }, [images]);
 
   return (
-    <div className="flex overflow-hidden w-screen relative text-[--bg-dark]">
+    <div className="flex overflow-hidden w-screen relative text-[--bg-dark] shadow-lg rounded-[8px]">
       {images.map((image, index) => (
         <img
           key={index}
@@ -33,7 +33,7 @@ const ImageAutoSlide = ({ images }) => {
               transform: `translateX(-${currentIndex * 100}%)`,
               transition: "transform 0.6s ease 0.4s",
             }}
-            className="h-full flex flex-col justify-center w-screen px-2 sm:text-sm md:text-2xl lg:text-3xl font-semibold">
+            className="h-full flex flex-col justify-center w-screen px-2 text-[0.75rem] md:text-2xl lg:text-3xl font-semibold">
             {image.label.map((text, i) => (
               <p key={i}>{text}</p>
             ))}

@@ -7,13 +7,13 @@
 @import "@fontsource/roboto/700.css";
 
 :root {
-  --bg-dark: #1c603a;
-  --bg: #56a96a;
-  --bg-light: #b1f0b4;
-  --bg-lighter: #56a96a22;
-  --text-light: #fcfcfc;
-  --text-hover: #222222aa;
-  --border: #1c603a55;
+  --bg-dark: #3d4d93;
+  --bg: #8c9fdb;
+  --bg-light: #adc8ff;
+  --bg-lighter: #f2f7ff;
+  --text-light: #f2f7ff;
+  --text-hover: #24327a;
+  --border: #cfddff;
   --icon: #073529;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .grid-layout {
-  @apply grid grid-cols-1 place-content-center place-items-center gap-4;
+  @apply grid grid-cols-1 place-content-center place-items-center gap-[24px];
 }
 
 .icon-style {
@@ -43,7 +43,7 @@
 }
 
 .gradient-dark {
-  background: linear-gradient(to right, var(--bg-dark), var(--bg-light));
+  background: linear-gradient(to top, var(--bg-dark), var(--bg-light));
 }
 
 ::-webkit-scrollbar {

@@ -1,8 +1,13 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import { Menu } from "@mui/material";
+import { ListItemIcon, Menu } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import OurLogo from "./OurLogo";
+import VerifiedUserIcon from "@mui/icons-material/VerifiedUser";
+import CollectionsBookmarkIcon from "@mui/icons-material/CollectionsBookmark";
+import CorporateFareIcon from "@mui/icons-material/CorporateFare";
+import CalculateIcon from "@mui/icons-material/Calculate";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 
 function HeaderTop() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -15,65 +20,77 @@ function HeaderTop() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const navList = [
+    {
+      path: "/audit",
+      name: "Audit",
+      icon: <VerifiedUserIcon />,
+    },
+    {
+      path: "/book-keeping",
+      name: "Book Keeping",
+      icon: <CollectionsBookmarkIcon />,
+    },
+    {
+      path: "/vat-consulting",
+      name: "VAT Consulting",
+      icon: <BusinessCenterIcon />,
+    },
+    {
+      path: "/tax",
+      name: "TAX Agent",
+      icon: <CalculateIcon />,
+    },
+    {
+      path: "/corporate-tax",
+      name: "Corporate TAX",
+      icon: <CorporateFareIcon />,
+    },
+    {
+      path: "/internal-audit",
+      name: "Internal Audit",
+      icon: <VerifiedUserIcon />,
+    },
+  ];
 
   return (
     <>
-      <div className="gradient-dark py-2 font-semibold text-[--text-light]">
-        <span className="grid grid-cols-[auto_1fr] px-1 md:px-6">
-          <span className="self-center">Our Office:</span>
-          <span className="grid grid-cols-1 px-2">
-            <span>0588124755</span>
-            <a
-              href="mailto:gulftax@worthprime.ae"
-              className="hover:text-[--text-hover] hover:underline">
-              gulftax@worthprime.ae
-            </a>
+      <div className="bg-[--bg-dark] py-[16px] font-semibold text-[--text-light]">
+        <span className="grid grid-cols-[auto_1fr] px-1 md:px-6 text-[0.75rem] md:text-[1rem]">
+          <span className="self-center underline underline-offset-4 whitespace-nowrap">
+            Our Office:
+          </span>
+          <span className="px-[8px] lg:px-[100px] flex justify-between gap-[16px]">
+            <span>Phone No: 0588124755</span>
+            <span>Landline No: +971-588124755</span>
+            <span>
+              Email:{" "}
+              <a
+                href="mailto:gulftax@worthprime.ae"
+                className="hover:text-[--text-hover] hover:underline">
+                gulftax@worthprime.ae
+              </a>
+            </span>
           </span>
         </span>
       </div>
-      <div className="gradient-light py-2 md:px-6 flex w-full justify-between z-10 sticky top-0">
+      <div className="bg-[--bg] py-2 md:px-6 flex w-full justify-between z-10 sticky top-0">
         <OurLogo />
         <MenuIcon
           className="!text-[50px] cursor-pointer"
           onClick={handleClick}
         />
-        <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
-          <Link
-            onClick={handleClose}
-            to="/audit"
-            className="block p-1 hover:bg-[--bg-light]">
-            Audit
-          </Link>
-          <Link
-            onClick={handleClose}
-            to="/book-keeping"
-            className="block p-1 hover:bg-[--bg-light]">
-            Book Keeping
-          </Link>
-          <Link
-            onClick={handleClose}
-            to="/vat-consulting"
-            className="block p-1 hover:bg-[--bg-light]">
-            VAT Consulting
-          </Link>
-          <Link
-            onClick={handleClose}
-            to="/tax"
-            className="block p-1 hover:bg-[--bg-light]">
-            TAX Agent
-          </Link>
-          <Link
-            onClick={handleClose}
-            to="/corporate-tax"
-            className="block p-1 hover:bg-[--bg-light]">
-            Corporate Tax
-          </Link>
-          <Link
-            onClick={handleClose}
-            to="/internal-audit"
-            className="block p-1 hover:bg-[--bg-light]">
-            Internal Audit
-          </Link>
+        <Menu anchorEl={anchorEl} open={open} onClose={handleClose} className="rounded-[16px]">
+          {navList.map((nav) => (
+            <Link
+              key={nav.path}
+              onClick={handleClose}
+              to={nav.path}
+              className="block px-[32px] py-[12px] hover:bg-[--bg-light] flex item-center">
+              <ListItemIcon>{nav.icon}</ListItemIcon>
+              {nav.name}
+            </Link>
+          ))}
         </Menu>
       </div>
     </>
