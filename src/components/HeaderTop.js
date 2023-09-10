@@ -61,8 +61,8 @@ function HeaderTop() {
             Our Office:
           </span>
           <span className="px-[8px] lg:px-[100px] flex justify-between gap-[16px]">
-            <span>Phone No: 0588124755</span>
-            <span>Landline No: +971-588124755</span>
+            <span>Phone No: +971-588124755</span>
+            <span>Landline No: +971-43980220</span>
             <span>
               Email:{" "}
               <a

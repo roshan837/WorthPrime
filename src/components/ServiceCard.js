@@ -9,7 +9,9 @@ export default function ServiceCard({ service }) {
         src={service?.img}
         alt={service?.img}
       />
-      <Typography variant="h6">{service.title}</Typography>
+      <Typography variant="h6" className="!text-[1.1rem] !md:text-[1.4rem]">
+        {service.title}
+      </Typography>
       <Typography variant="subtitle2">{service.subTitle}</Typography>
       <Typography variant="body1" className="text-center">
         {service.detail}

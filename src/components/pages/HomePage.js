@@ -89,12 +89,12 @@ function HomePage() {
 
   const whyWorthPrime = [
     {
-      title: "Statutory Audit Companies in Dubai",
+      title: "Statutory Audit Companies",
       detail:
         "The statutory audit report helps to increase the trustworthiness and credibility of the organization or firm.",
     },
     {
-      title: "Client assessment by audit firms in Dubai",
+      title: "Client assessment by audit firms",
       detail:
         "Being proactive before conducting any type of commerce for potential customers",
     },
@@ -109,12 +109,12 @@ function HomePage() {
         "We are reliable financial advisors working for your success. We help you make the right financial decisions that work in your interest.",
     },
     {
-      title: "Financial security and peace of mind",
+      title: "Financial security",
       detail:
         "We cover a wide range of business functions and situations, providing robust financial advice and support to help you make proper business decisions.",
     },
     {
-      title: "Top-tier financial support for you",
+      title: "Top-tier financial support",
       detail:
         "As a leading financial advisory firm, we understand the financial challenges and problems you face. We help you navigate your complex situations and overcome them smoothly with minimal disruption to your company.",
     },
@@ -201,9 +201,11 @@ function HomePage() {
           <Typography variant="h4" className="text-center">
             Testimonials
           </Typography>
-          <div className="grid-layout md:grid-cols-2 lg:grid-cols-3 mb-8">
+          <div className="flex gap-[16px] w-full h-[400px] slider">
             {Testimonials.map((card) => (
-              <ServiceCard key={card.title} service={card} />
+              <div className="h-full flex-[0_0_100%] md:flex-none">
+                <ServiceCard key={card.title} service={card} />
+              </div>
             ))}
           </div>
         </div>
