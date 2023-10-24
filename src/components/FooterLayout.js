@@ -30,10 +30,21 @@ export default function FooterLayout() {
           <TwitterIcon className="icon" />
           <FacebookIcon className="icon" />
           <InstagramIcon className="icon" />
-          <WhatsAppIcon className="icon" />
+          <a
+            href="https://wa.me/+971588124755"
+            target="_blank"
+            className="hover:text-[--text-hover]">
+            <WhatsAppIcon className="icon" />
+          </a>
           <TelegramIcon className="icon" />
         </div>
       </div>
+      <a
+        href="https://wa.me/+971588124755"
+        target="_blank"
+        className="fixed bottom-10 left-10">
+        <WhatsAppIcon className="whatsapp-float" />
+      </a>
     </div>
   );
 }

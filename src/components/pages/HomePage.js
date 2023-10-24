@@ -120,27 +120,42 @@ function HomePage() {
     },
   ];
 
+  const activeClients = [
+    { label: "Total", value: "300+" },
+    { label: "VAT Consulting", value: "250+" },
+    { label: "Account & Book Keeping", value: "50+" },
+    { label: "Auditing", value: "200+" },
+  ];
   const Testimonials = [
     {
-      img: coleman,
-      title: "Jessie Coleman",
-      subTitle: "OUR ASSOCIATE",
+      title: "Edward Francener",
+      subTitle: "MISTRAL CLEANING SERVICES",
       detail:
         "Their strategic advice for my business proved a savior for me. I am incredibly grateful for their reliable partnership and guidance.",
     },
     {
-      img: mendez,
-      title: "Charlie Mendez",
-      subTitle: "ASSISTANT MANAGER",
+      title: "Ruslan Urmanav",
+      subTitle: "URBAN RENT A CAR",
       detail:
-        "These guys are absolutely excellent in their work! I highly recommend for them for financial advisory!",
+        "These guys are absolutely excellent in their work! I highly recommend them for financial advisory!",
     },
     {
-      img: ravi,
-      title: "Parker Ravi",
-      subTitle: "OUR MANAGER",
+      title: "Mr Sharad",
+      subTitle: "SHAIRA TRADING LLC",
       detail:
-        "I must say they have great insight and financial sense, which helped me take my business out of the monetary crisis.",
+        "Their financial expertise was the lifeline my business needed to escape a financial crisis.",
+    },
+    {
+      title: "Mr Sanit",
+      subTitle: "ADORE FRIGHT",
+      detail:
+        "Their exceptional financial insights and support pulled my business out of a monetary abyss.",
+    },
+    {
+      title: "Mr Anand",
+      subTitle: "APPAM CORNER RESTAURANT",
+      detail:
+        "Their financial acumen and guidance were instrumental in rescuing my business from financial turmoil.",
     },
   ];
   return (
@@ -199,12 +214,25 @@ function HomePage() {
             ))}
           </div>
           <Typography variant="h4" className="text-center">
+            Active clients
+          </Typography>
+          <div className="grid-layout sm:grid-cols-2 p-4 rounded-[16px] shadow-[--bg] shadow-md border border-[--border]">
+            {activeClients.map((client) => (
+              <div key={client.label} className="text-center font-bold">
+                <div className="font-medium">{client.label}</div>
+                <div>{client.value}</div>
+              </div>
+            ))}
+          </div>
+          <Typography variant="h4" className="text-center">
             Testimonials
           </Typography>
-          <div className="flex gap-[16px] w-full h-[400px] slider">
+          <div className="flex gap-[16px] w-full slider">
             {Testimonials.map((card) => (
-              <div className="h-full flex-[0_0_100%] md:flex-none">
-                <ServiceCard key={card.title} service={card} />
+              <div
+                key={card.title}
+                className="h-full flex-[0_0_100%] md:flex-none">
+                <ServiceCard service={card} />
               </div>
             ))}
           </div>
@@ -213,5 +241,4 @@ function HomePage() {
     </>
   );
 }
-
 export default HomePage;
