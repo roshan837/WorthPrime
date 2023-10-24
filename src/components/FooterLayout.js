@@ -33,6 +33,7 @@ export default function FooterLayout() {
           <a
             href="https://wa.me/+971588124755"
             target="_blank"
+            rel="noreferrer"
             className="hover:text-[--text-hover]">
             <WhatsAppIcon className="icon" />
           </a>
@@ -42,6 +43,7 @@ export default function FooterLayout() {
       <a
         href="https://wa.me/+971588124755"
         target="_blank"
+        rel="noreferrer"
         className="fixed bottom-10 left-10">
         <WhatsAppIcon className="whatsapp-float" />
       </a>

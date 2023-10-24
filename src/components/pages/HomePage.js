@@ -10,9 +10,9 @@ import {
   tax,
   finance_1,
   finance_2,
-  coleman,
-  ravi,
-  mendez,
+  // coleman,
+  // ravi,
+  // mendez,
 } from "assets/images";
 import { Box, Typography } from "@mui/material";
 function HomePage() {
