@@ -2,15 +2,16 @@ import AuditPage from "components/pages/AuditPage";
 import Bookkeeping from "components/pages/BookKeepingPage";
 import HeaderTop from "components/HeaderTop.js";
 import HomePage from "components/pages/HomePage";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ConsultingPage from "components/pages/ConsultingPage";
 import TaxPage from "components/pages/TAXPage";
 import VatConsultingPage from "components/pages/VatConsultingPage";
 import InternalAuditPage from "components/pages/InternalAuditPage";
 import FooterLayout from "components/FooterLayout";
+
 function App() {
   return (
-    <Router>
+    <Router basename="/">
       <HeaderTop />
       <Routes>
         <Route path="/" element={<HomePage />} />

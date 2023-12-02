@@ -161,6 +161,17 @@ function HomePage() {
   return (
     <>
       <SliderView images={images} className="h-full w-full" />
+      <Typography variant="h4" className="text-center py-4">
+        Active clients
+      </Typography>
+      <div className="grid-layout sm:grid-cols-2 p-4 rounded-4 shadow-[--bg] shadow-md border border-[--border] w-[80vw] mx-auto">
+        {activeClients.map((client) => (
+          <div key={client.label} className="text-center font-bold">
+            <div className="font-medium">{client.label}</div>
+            <div>{client.value}</div>
+          </div>
+        ))}
+      </div>
       <Box className="p-10">
         <Typography variant="h4" className="text-center p-4">
           Our Services
@@ -214,24 +225,11 @@ function HomePage() {
             ))}
           </div>
           <Typography variant="h4" className="text-center">
-            Active clients
-          </Typography>
-          <div className="grid-layout sm:grid-cols-2 p-4 rounded-[16px] shadow-[--bg] shadow-md border border-[--border]">
-            {activeClients.map((client) => (
-              <div key={client.label} className="text-center font-bold">
-                <div className="font-medium">{client.label}</div>
-                <div>{client.value}</div>
-              </div>
-            ))}
-          </div>
-          <Typography variant="h4" className="text-center">
             Testimonials
           </Typography>
-          <div className="flex gap-[16px] w-full slider">
+          <div className="slider">
             {Testimonials.map((card) => (
-              <div
-                key={card.title}
-                className="h-full flex-[0_0_100%] md:flex-none">
+              <div className="w-full" key={card.title}>
                 <ServiceCard service={card} />
               </div>
             ))}

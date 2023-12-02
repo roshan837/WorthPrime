@@ -45,7 +45,7 @@ export default function FooterLayout() {
         target="_blank"
         rel="noreferrer"
         className="fixed bottom-10 left-10">
-        <WhatsAppIcon className="whatsapp-float" />
+        <WhatsAppIcon className="whatsapp-float shadow-lg" />
       </a>
     </div>
   );
